@@ -1,0 +1,7 @@
+venv/
+photos/migrations/
+.idea/
+staticfiles/
+static/
+db.sqlite3
+
