@@ -1,6 +1,9 @@
 # Django Photo Albums
-<h3><img width="955" alt="photo_album" src="https://user-images.githubusercontent.com/43213479/189373764-95eb419b-ff4a-4b76-97d0-0901103b6ac7.png">
+
+<h3>
+  <img width="955" alt="photo_album" src="https://user-images.githubusercontent.com/43213479/189373764-95eb419b-ff4a-4b76-97d0-0901103b6ac7.png">
 </h3>
+
 ## How To Run The Project
 
 Create and activate virtual environment for Mac OS:
