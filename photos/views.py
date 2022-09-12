@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Category, Photo
+from django.core.paginator import Paginator
+
 
 
 def gallery(request):
@@ -8,9 +10,13 @@ def gallery(request):
         photos = Photo.objects.all()
     else:
         photos = Photo.objects.filter(category__name__contains=category)
+    page_numbers = Photo.objects.all()
+    paginator = Paginator(page_numbers, 3)
+    page = request.GET.get('page')
+    page_obj = paginator.get_page(page)
 
     categories = Category.objects.all()
-    context = {'categories': categories, 'photos': photos}
+    context = {'categories': categories, 'photos': photos, 'page_obj': page_obj}
     return render(request, 'gallery.html', context)
 
 
